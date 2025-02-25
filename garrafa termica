@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garrafa Térmica Inteligente</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: #f4f4f4;
+            color: #333;
+        }
+        .navbar {
+            background: black;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .navbar a:hover {
+            border-bottom: 2px solid white;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 100px auto 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        .hero {
+            background: url('garrafa.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img, video {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            background: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #444;
+        }
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e60000;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#sobre">Sobre</a>
+        <a href="#caracteristicas">Características</a>
+        <a href="#compra">Comprar</a>
+        <a href="#contato">Contato</a>
+    </div>
+    
+    <div class="hero">Garrafa Térmica Inteligente</div>
+    
+    <section id="sobre" class="container product">
+        <h1>Sobre o Produto</h1>
+        <p>Design moderno, tecnologia avançada e máxima eficiência térmica.</p>
+        <img src="garrafa.jpg" alt="Garrafa Térmica Inteligente">
+        <video controls>
+            <source src="video_garrafa.mp4" type="video/mp4">
+            O seu navegador não suporta a tag de vídeo.
+        </video>
+    </section>
+    
+    <section id="caracteristicas" class="container product">
+        <h2>Características</h2>
+        <ul>
+            <li>Conserva líquidos quentes até 12h e frios até 24h</li>
+            <li>Ecrã LED com temperatura</li>
+            <li>Notificações de hidratação</li>
+            <li>Design moderno e leve</li>
+        </ul>
+    </section>
+    
+    <section id="compra" class="container product">
+        <h2>Comprar Agora</h2>
+        <p>Escolha a quantidade desejada:</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="teu-email-paypal@example.com">
+            <select name="amount">
+                <option value="29.99">1 Garrafa - €29,99</option>
+                <option value="55.99" selected>2 Garrafas - €55,99</option>
+                <option value="79.99">3 Garrafas - €79,99</option>
+            </select>
+            <input type="hidden" name="currency_code" value="EUR">
+            <input type="hidden" name="return" value="https://teu-site.com/compra-concluida">
+            <input type="hidden" name="notify_url" value="https://teu-site.com/notificacao">
+            <input type="submit" value="Comprar Agora" class="btn">
+        </form>
+    </section>
+    
+    <section id="contato" class="container product">
+        <h2>Contato</h2>
+        <p>Tem alguma dúvida? Entre em contacto connosco!</p>
+        <a href="#" class="btn">Fale Conosco</a>
+    </section>
+</body>
+</html>
